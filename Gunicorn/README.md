@@ -10,15 +10,17 @@
     ![virtualenv](https://user-images.githubusercontent.com/53372486/141655880-63267d54-c25c-4dd8-89b4-95bd3b139385.png)<br/>
 
  install gunicorn<br/>
+    -sudo apt install python3-django
     -pip install gunicorn<br/>
  create django-demo project<br/>
     -django-admin startproject demo<br/>
     nano demo/demo/settings.py<br/>
- added host ip<br/>
+ added host ip in settings.py<br/>
     -ALLOWED_HOSTS = ['192.168.141.128']<br/>
     mkdir conf<br/>
     nano gunicorn_config.py<br/>
-added these lines<br/>
+# Deploy the 3 instance of application using Gunicorn in 8089 port.
+added these lines in gunicorn_config.py<br/>
     command ='/home/rabindra/django_env/bin/gunicorn'<br/>
     pythonpath = '/home/rabindra/demo'<br/>
     bind = '192.168.141.128:8089'<br/>
@@ -29,3 +31,6 @@ start gunicorn<br/>
     gunicorn -c conf/gunicorn_config.py demo.wsgi<br/>
  ![gunicornstart](https://user-images.githubusercontent.com/53372486/141655901-7184a3fa-7df2-4e04-9e93-48dcad527086.png)<br/>
  ![web](https://user-images.githubusercontent.com/53372486/141655898-f7ee9169-ebb5-4dd8-9d59-fcb4d73ce8cd.png)<br/>
+
+# For access log and error log
+gunicorn app_py:demo --error-logfile gunicorn.error.log --access-logfile gunicorn.log --capture-output<br/>

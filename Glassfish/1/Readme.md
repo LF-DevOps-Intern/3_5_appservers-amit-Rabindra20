@@ -1,4 +1,4 @@
-- Install Glassfish server and change HTTP port to 8088.
+# Install Glassfish server and change HTTP port to 8088.
 steps:<br/>   
       -sudo apt-get update<br/> 
    install java<br/> 
