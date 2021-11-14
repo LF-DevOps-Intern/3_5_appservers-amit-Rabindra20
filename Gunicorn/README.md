@@ -5,7 +5,7 @@
  steps:<br/>
     <pre>-sudo apt install -y python3-venv<br/>
  virtual environment for django<br/>
-    <pre>-python3 -m venv django_env<br/>
+    <pre>-python3 -m venv django_env</pre><br/>
          -source django_env/bin/activate <br/>
     ![virtualenv](https://user-images.githubusercontent.com/53372486/141655880-63267d54-c25c-4dd8-89b4-95bd3b139385.png) <br/>
 
