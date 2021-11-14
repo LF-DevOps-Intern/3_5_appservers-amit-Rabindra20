@@ -2,7 +2,7 @@
 Steps:<br/>
  Install ecllipse IDE<br/>
   -https://www.eclipse.org/downloads/?osType=linux<br/>
- <pre>-start project with maven<br/>
+ <pre>-start project with maven</pre><br/>
  -file > new > maven project<br/>
  ![workspace](https://user-images.githubusercontent.com/53372486/141670215-aea60b09-7d80-4845-a155-02ed6f21158b.png)<br/>
  -Select an Archetype<br/>
